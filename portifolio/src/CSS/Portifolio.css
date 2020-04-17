@@ -1,0 +1,64 @@
+/* Configuração da visualização padrão: */
+.po {
+    display: flex;
+    flex-direction: column;
+}
+.poTitle {
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 4vw 0.5vw 2vw 0.5vw;
+    margin: 0.5vw 0.5vw;
+    color: white;
+    border-top: solid 1px rgba(255, 255, 255, 0.20);
+}
+.projectBoard {
+    background-color: rgba(0, 0, 0, 0.85);
+    margin: 0.5vw 1vw;
+    border: solid 0.5px rgba(255, 255, 255, 0.15);
+    border-radius: 0.25vw;
+}
+.poSubtitle {
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 0.5vw 1vw;
+    color: rgb(46, 191, 255);
+}
+.poContent {
+    font-size: 1.5vw;
+    text-align: left;
+    border-radius: 0.25vw;
+    padding: 0.5vw;
+    margin: 0vw 0.5vw 1vw 0.5vw;
+    color: white;
+    height: 8vw;
+    overflow-y: auto;
+    border: solid 0.5px rgba(255, 255, 255, 0.45);
+}
+/* Configuração das imagens: */
+.imageTemplate img {
+    width: 25vw;
+    height: 15vw;
+    margin: 10px 32vw;
+    border-radius: 0.5vw;
+}
+.poTopic {
+    color: white;
+}
+/* Configuração da visão mobile: */
+@media(max-width: 610px) {
+    .poTitle {
+        font-size: 13px;
+        padding: 8vw 0.5vw 4vw 0.5vw;
+    }
+    .projectBoard {
+        background-color: rgba(23, 25, 28, 0.85);
+        margin-bottom: 10px;
+    }
+    .poSubtitle {
+        font-size: 14px;
+    }
+    .poContent {
+        font-size: 14px;
+        height: 20vw;
+    }
+}
