@@ -1,0 +1,107 @@
+/* Configuração da visualização padrão: */
+.po {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.cabecalhoLogo {
+    display: inline-block;
+    height: 60px;
+    padding: 2.5px;
+    margin: 2px 20px 2px 2px;
+    text-align: center;
+}
+#cabecalhoLogo-nome {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+#cabecalhoLogo-cargo {
+    font-size: 8px;
+    color: white;
+}
+.poTitle {
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 1vw 1vw;
+    color: white;
+}
+.projectBoard {
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 0.5vw 1vw;
+    border: solid 0.5px rgba(255, 255, 255, 0.15);
+    border-radius: 0.25vw;
+    display: flex;
+    flex-direction: row;
+}
+.projectBoardSide {
+    margin: 0.5vw;
+    border-radius: 0.25vw;
+}
+.poSubtitle {
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 0.5vw 1vw;
+    color: rgb(46, 191, 255);
+}
+.poDescription {
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 0.5vw 1vw 0.5vw 0vw;
+    color: rgb(46, 191, 255);
+}
+.poContent {
+    font-size: 1.5vw;
+    text-align: left;
+    border-radius: 0.25vw;
+    padding: 0.5vw;
+    margin: 0vw 0.5vw 1vw 0.5vw;
+    color: white;
+    overflow-y: auto;
+}
+.poAccess {
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 0.2vw 0.5vw;
+    margin: 0.5vw 0.5vw;
+    color: white;
+    text-align: center;
+    background-color: rgb(46, 191, 255);
+    cursor: pointer;
+    border-radius: 10px;
+}
+/* Configuração das imagens: */
+.projectBoardSide img {
+    width: 20vw;
+    height: auto;
+    border-radius: 0.5vw;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.poTopic {
+    color: white;
+}
+/* Configuração da visão mobile: */
+@media(max-width: 610px) {
+    .poTitle {
+        font-size: 20px;
+        margin: 2vw 0.5vw;
+    }
+    .projectBoard {
+    background-color: rgba(23, 25, 28, 0.85);
+    margin-bottom: 10px;
+    }
+    .poSubtitle {
+        font-size: 14px;
+    }
+    .poDescription {
+        font-size: 14px;
+    }
+    .poContent {
+        font-size: 14px;
+    }
+    .poAccess {
+        font-size: 20px;
+    }
+}
