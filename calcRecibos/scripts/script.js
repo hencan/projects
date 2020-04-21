@@ -13,7 +13,7 @@ for (var i = 1; i < keys.length; i++) {
         } else {
             if (btnVal == '=') {
                 inputVal = eval(input.innerHTML)
-                document.querySelector('#historic').innerHTML += "<div><span>➕</span> " + input.innerHTML + " =" + inputVal + "</div>"
+                document.querySelector('#historic').innerHTML += "<div><span>[addText] </span> (" + input.innerHTML + " =" + inputVal + ")</div>"
                 input.innerHTML = inputVal
 
                 hist = document.querySelectorAll('#historic span')
@@ -24,11 +24,11 @@ for (var i = 1; i < keys.length; i++) {
                         btnHistVal = this.innerHTML
 
                         if (btnHistVal[0] == '✎') {
-                            this.innerHTML = "✎ " + prompt("Insira seu texto personalido") +  "     |     "
+                            this.innerHTML = "✎ ( " + prompt("Insira seu texto personalido") +  " )          "
 
                         } else {
-                            if (btnHistVal == '➕') {
-                                this.innerHTML = "✎ " + prompt("Insira seu texto personalido") + "     |     "
+                            if (btnHistVal[0] == '[') {
+                                this.innerHTML = "✎ ( " + prompt("Insira seu texto personalido") + " )          "
                             }
                         }
 

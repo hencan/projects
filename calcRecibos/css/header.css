@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px black;
+}
+.headerLogo {
+    text-align: center;
+    cursor: pointer;
+}
+#headerLogo-nome {
+    font-size: 2vw;
+    font-weight: bold;
+}
+#headerLogo-cargo {
+    font-size: 0.65vw;
+}
+.headerMenu {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5vw;
+}
+.headerMenu div{
+    padding: 0.5vw 2vw;
+    margin: 0.5vw 2vw;
+}
+.headerMenu div:hover, 
+.headerMenu div.selected {
+    background-color: rgb(25, 25, 25);
+    color: rgb(238, 238, 238);
+    border-radius: 3px;
+}
+@media(min-width: 610.5px) {
+    .menu-burger {
+        display: none;
+    }
+  }

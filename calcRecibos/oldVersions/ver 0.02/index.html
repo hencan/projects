@@ -4,35 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/app.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/menuToggle.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="headerLogo"><!-- Logo -->
-                <span id="headerLogo-nome">HEN CAN</span><br>
-                <span id="headerLogo-cargo">Web Developer (Front & Backend)</span>
-        </div>
-        <nav class="headerMenu"><!-- Menu tradicional -->
-                <div>Instruções</div>
-                <div>Compartilhar</div>
-        </nav>
-        <div class="menu-burger" onclick={openClose()}><!-- Menu toggle -->
-            <div class="bar-menu-burger"></div>
-            <div class="bar-menu-burger"></div>
-            <div class="bar-menu-burger"></div>
-        </div>
-        <div class="sidebarMenu">
-            <div onclick={openClose()}>Instruções</div>
-            <div onclick={openClose()}>Compartilhar</div>
-        </div>
-        <div class="menu-background" onclick={openClose()}></div><!-- Fim do menu toggle -->
-    </header>
     <div id="app">
         <div id="historic"><div><span>✎ Historico:</span></div></div>
         <div id="openHistoric">Mostrar todo o historico</div>
@@ -62,7 +39,6 @@
             </div>
         </div>   
     </div>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/openCloseMenu.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
