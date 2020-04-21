@@ -34,14 +34,20 @@
         <div class="menu-background" onclick={openClose()}></div><!-- Fim do menu toggle -->
     </header>
     <div id="app">
-        <div id="historic"><div><span>✎ Historico:</span></div></div>
+        <div id="historic">
+            <div id="histTitle">✎ Historico:</div>
+            <div id="histAgrup">
+                <div id="histText">Comentários</div>
+                <div id="histCalc">Cálculos</div>
+            </div>
+        </div>
         <div id="openHistoric">Mostrar todo o historico</div>
         <div id="calculator">
             <div id="display">0</div>
             <div id="keyboard">
                 <div class="buttonsGray">💾</div>
                 <div class="buttonsGray">C</div>
-                <div class="buttonsGray rotate180">⌦</div>
+                <div class="buttonsGray">⌫</div>
                 <div class="buttonsGray">/</div>
                 <div class="buttonsWhite">7</div>
                 <div class="buttonsWhite">8</div>
@@ -57,7 +63,7 @@
                 <div class="buttonsGray">+</div>
                 <div class="buttonsWhite">⁺/₋</div>
                 <div class="buttonsWhite">0</div>
-                <div class="buttonsWhite">,</div>
+                <div class="buttonsWhite">.</div>
                 <div class="buttonsBlue">=</div>
             </div>
         </div>   

@@ -1,5 +1,6 @@
 var keys = document.querySelectorAll('#keyboard div')
-var hist = document.querySelectorAll('#historic span')
+var hist = document.querySelectorAll('#histText, #histText span, #histTitle')
+var posOp = 0
 
 for (var i = 1; i < keys.length; i++) {
     keys[i].onclick = function () {
@@ -10,13 +11,14 @@ for (var i = 1; i < keys.length; i++) {
 
         if (btnVal == 'C') {
             input.innerHTML = 0
-        } else {
-            if (btnVal == '=') {
+        } else if (btnVal == '=') {
                 inputVal = eval(input.innerHTML)
-                document.querySelector('#historic').innerHTML += "<div><span>[addText] </span> (" + input.innerHTML + " =" + inputVal + ")</div>"
+                document.querySelector('#histText').innerHTML += "<br><span>✎</span>"
+                document.querySelector('#histCalc').innerHTML += "<br>" + input.innerHTML + " = " + inputVal
                 input.innerHTML = inputVal
+                posOp=1
 
-                hist = document.querySelectorAll('#historic span')
+                hist = document.querySelectorAll('#histText, #histText span, #histTitle')
 
                 for (var i = 0; i < hist.length; i++) {
                     hist[i].onclick = function () {
@@ -24,24 +26,54 @@ for (var i = 1; i < keys.length; i++) {
                         btnHistVal = this.innerHTML
 
                         if (btnHistVal[0] == '✎') {
-                            this.innerHTML = "✎ ( " + prompt("Insira seu texto personalido") +  " )          "
+                            this.innerHTML = "✎ " + prompt("Insira seu texto personalido")
 
-                        } else {
-                            if (btnHistVal[0] == '[') {
-                                this.innerHTML = "✎ ( " + prompt("Insira seu texto personalido") + " )          "
-                            }
                         }
-
                     }
                 }
-            } else {
-                if (input.innerHTML == 0) {
-                    input.innerHTML = ''
-                    input.innerHTML += btnVal
-                } else {
-                    input.innerHTML += btnVal
-                }
-            }
-        }
+            } else if (btnVal == '⌫') {
+                    if (input.innerHTML == "") {
+                        input.innerHTML = 0
+                    } else if (input.innerHTML.length < 2) {
+                        input.innerHTML = 0
+                    } else {
+                        input.innerHTML = input.innerHTML.substring(0,(input.innerHTML.length - 1))
+                        posOp = 0
+                    }
+                } else if (btnVal == '⁺/₋') {
+                        if (input.innerHTML == "") {
+                            input.innerHTML = 0
+                        } else if (input.innerHTML == 0) {
+                            input.innerHTML = 0
+                        } else {
+                            input.innerHTML = eval(input.innerHTML) * (-1) 
+                        }
+                    // } else if (btnVal == '.') {
+                    //     if (input.innerHTML == "") {
+                    //         input.innerHTML = 0
+                    //     } else if (input.innerHTML == 0) {
+                    //         input.innerHTML = 0
+                    //     } else if ({
+                    //         input.innerHTML = eval(input.innerHTML) * (-1) 
+                    //     }
+                    } else if (posOp > 0) {
+                        input.innerHTML = ''
+                        input.innerHTML += btnVal
+                        posOp=0
+                    } else {
+                        if (input.innerHTML == 0)  {
+                            input.innerHTML = ''
+                            input.innerHTML += btnVal
+                        } else {
+                            input.innerHTML += btnVal
+                        }
+                    }
+                    
+                            
+                                      
+                
+                
+            
+        
     }
 }
