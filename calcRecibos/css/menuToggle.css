@@ -1,13 +1,9 @@
 /* Configuração do Menu-Toggle: */
 .menu-burger {
-  /* width: 20px;
-  height: 20px; */
-  /* position: fixed;
-  top: 15px;
-  right: 20px; */
   cursor: pointer;
   margin-left: auto;
   margin-right: 10px;
+  padding: 5px 0;
 }
 .bar-menu-burger {
   border: solid 1px black;
@@ -19,24 +15,26 @@
 .sidebarMenu {
   position: fixed;
   top: 53px;
-  right: -155px;
-  width: 150;
+  right: -55px;
+  width: 50px;
   display: flex;
   flex-direction: column;
   transition: linear 300ms;
   z-index: 98;
 }
 .sidebarMenu div {
-  /* background-color: white; */
-  /* border: solid 0.5px black; */
+  background-color: white;
+  border: solid 0.5px black;
+  border-radius: 10%;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 2px 5px;
+  margin: 1px 10px 1px 0;
+  font-size: 10px;
+  text-align: center;
 }
 .sidebarMenu div img {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
   width: auto;
-  height: 50px;
+  height: 30px;
   padding: 0;
 }
 .menu-background {
@@ -54,10 +52,14 @@
   .headerMenu {
     display: none;
   }
+  .headerLogo {
+    margin-left: 5px;
+  }
   #headerLogo-nome {
-      font-size: 20px;
+      font-size: 22px;
   }
   #headerLogo-cargo {
-      font-size: 6px;
+      font-size: 7px;
+      padding-bottom: 1px;
   }
 }

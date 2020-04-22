@@ -14,13 +14,13 @@
 <body>
     <header class="header">
         <div class="headerLogo"><!-- Logo -->
-                <span id="headerLogo-nome">HEN CAN</span><br>
-                <span id="headerLogo-cargo">Web Developer (Front & Backend)</span>
+                <div id="headerLogo-nome">HEN CAN</div>
+                <div id="headerLogo-cargo">Web Developer (Front & Backend)</div>
         </div>
         <nav class="headerMenu"><!-- Menu tradicional -->
-                <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconAbout.png" alt="iconAbout"></div>
-                <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconHelp.png" alt="iconHelp"></div>
-                <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconShare.jpg" alt="iconShare"></div>
+                <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconAbout.png" alt="iconAbout">About</div>
+                <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconHelp.png" alt="iconHelp">Help</div>
+                <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconShare.jpg" alt="iconShare">Share</div>
         </nav>
         <div class="menu-burger" onclick={openClose()}><!-- Menu toggle -->
             <div class="bar-menu-burger"></div>
@@ -28,9 +28,9 @@
             <div class="bar-menu-burger"></div>
         </div>
         <div class="sidebarMenu">
-            <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconAbout.png" alt="iconAbout"></div>
-            <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconHelp.png" alt="iconHelp"></div>
-            <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconShare.jpg" alt="iconShare"></div>
+            <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconAbout.png" alt="iconAbout">About</div>
+            <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconHelp.png" alt="iconHelp">Help</div>
+            <div><img src="https://hencan.github.io/projects/calcRecibos/images/iconShare.jpg" alt="iconShare">Share</div>
         </div>
         <div class="menu-background" onclick={openClose()}></div><!-- Fim do menu toggle -->
     </header>
@@ -42,7 +42,6 @@
                 <div id="histCalc">Cálculos</div>
             </div>
         </div>
-        <div id="openHistoric">Mostrar todo o historico</div>
         <div id="calculator">
             <div id="display"><div id="displaySub">0</div><div id="displayNum">0</div></div>
             <div id="keyboard">
@@ -69,7 +68,7 @@
             </div>
         </div>   
     </div>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/app.js"></script>
     <script src="./scripts/openCloseMenu.js"></script>
 </body>
 </html>

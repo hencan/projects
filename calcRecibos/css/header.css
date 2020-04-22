@@ -6,23 +6,31 @@
 .headerLogo {
     text-align: center;
     cursor: pointer;
+    margin: 0px 15px;
+    padding: 0;
 }
 #headerLogo-nome {
-    font-size: 2vw;
+    font-size: 30px;
     font-weight: bold;
+    padding: 0;
+    margin: 0;
 }
 #headerLogo-cargo {
-    font-size: 0.65vw;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
 }
 .headerMenu {
     display: flex;
     flex-direction: row;
-    font-size: 1.5vw;
+    font-size: 10px;
     margin-left: auto;
 }
 .headerMenu div{
-    padding: 0 0.5vw;
-    margin: 0.5vw;
+    padding: 0 10px;
+    margin: 5px;
+    width: 40px;
+    text-align: center;
 }
 .headerMenu div img{
     width: auto;
@@ -33,7 +41,7 @@
     -webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
-.headerMenu div:hover, 
+.headerMenu div img:hover, 
 .headerMenu div.selected {
     /* background-color: rgba(25, 25, 25, 0.25);
     border-radius: 3px; */
