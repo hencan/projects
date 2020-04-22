@@ -1,16 +1,17 @@
 /* Configuração do Menu-Toggle: */
 .menu-burger {
-  width: 20px;
-  height: 20px;
+  /* width: 20px;
+  height: 20px; */
   /* position: fixed;
   top: 15px;
   right: 20px; */
   cursor: pointer;
   margin-left: auto;
+  margin-right: 10px;
 }
 .bar-menu-burger {
   border: solid 1px black;
-  width: 16px;
+  width: 25px;
   height: 2px;
   margin: 3px 3px;
   background: black;
@@ -26,14 +27,17 @@
   z-index: 98;
 }
 .sidebarMenu div {
-  background-color: white;
-  border: solid 0.5px black;
-  list-style: none;
-  color: black;
-  text-transform: uppercase;
-  font-weight: bold;
+  /* background-color: white; */
+  /* border: solid 0.5px black; */
   cursor: pointer;
-  padding: 12px 5px;
+  padding: 5px 10px;
+}
+.sidebarMenu div img {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: auto;
+  height: 50px;
+  padding: 0;
 }
 .menu-background {
   background-color: rgba(0, 0, 0, 0.75);
