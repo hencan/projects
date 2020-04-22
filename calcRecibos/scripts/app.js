@@ -34,7 +34,7 @@ for (var i = 1; i < keys.length; i++) {
                 document.querySelector('#histCalc').innerHTML += "<br>" + inputSub.innerHTML + " = " + inputVal
                 inputNum.innerHTML = inputVal
                 posOp = 1
-                isEqualActived = 0
+                isEqualActived = 1
                 isAnyActived = 0
 
                 hist = document.querySelectorAll('#histText span, #histTitle')
