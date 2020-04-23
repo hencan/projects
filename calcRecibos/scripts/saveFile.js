@@ -6,8 +6,6 @@ $(document).ready(function () {
 
 
     $("#previewBtn").on('click', function () {
-        document.querySelector("#historic").style.background = "gray"
-        // document.querySelector("#historic").style.border = "solid" + 1 + "px" + "black"
         html2canvas(element, {
             onrendered: function (canvas) {
                 $("#previewImage").append(canvas);
@@ -28,7 +26,7 @@ $(document).ready(function () {
         var imgageData = getCanvas.toDataURL("image/png");
         // Now browser starts downloading it instead of just showing it
         var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-        $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);
+        $("#btn-Convert-Html2Image").attr("download", "historico_HenCanAPP.png").attr("href", newData);
     });
 
 });

@@ -20,9 +20,9 @@
                 <div id="headerLogo-cargo">Web Developer (Front & Backend)</div>
         </div>
         <nav class="headerMenu"><!-- Menu tradicional -->
-                <div><img src="./images/iconAbout.png" alt="iconAbout">About</div>
-                <div><img src="./images/iconHelp.png" alt="iconHelp">Help</div>
-                <div  onclick={share()}><img src="./images/iconShare.png" alt="iconShare">Share</div>
+                <div  onclick={openCloseAbout()}><img src="./images/icons/iconAbout.png" alt="iconAbout">About</div>
+                <div  onclick={openCloseHelp()}><img src="./images/icons/iconHelp.png" alt="iconHelp">Help</div>
+                <div  onclick={share()}><img src="./images/icons/iconShare.png" alt="iconShare">Share</div>
         </nav>
         <div class="menu-burger" onclick={openCloseMenuToggle()}><!-- Menu toggle -->
             <div class="bar-menu-burger"></div>
@@ -30,13 +30,43 @@
             <div class="bar-menu-burger"></div>
         </div>
         <div class="sidebarMenu">
-            <div onclick={openCloseMenuToggle()}><img src="./images/iconAbout.png" alt="iconAbout">About</div>
-            <div onclick={openCloseMenuToggle()}><img src="./images/iconHelp.png" alt="iconHelp">Help</div>
-            <div onclick={share()}><img src="./images/iconShare.png" alt="iconShare">Share</div>
+            <div onclick={openCloseAbout();openCloseMenuToggle()}><img src="./images/icons/iconAbout.png" alt="iconAbout">About</div>
+            <div onclick={openCloseHelp();openCloseMenuToggle()}><img src="./images/icons/iconHelp.png" alt="iconHelp">Help</div>
+            <div onclick={share();openCloseMenuToggle()}><img src="./images/icons/iconShare.png" alt="iconShare">Share</div>
         </div>
-        <div class="about-background" onclick={openCloseMenuToggle()}></div><!-- Ações do menu toggle -->
-        <div class="help-background" onclick={openCloseMenuToggle()}></div><!-- Ações do menu toggle -->
-        <div class="share-background" onclick={openCloseShare()}><div>Teste de Compartilhamento <br><br> Este sistema não suporta o compartilhamento</div><div>Fechar</div></div><!-- Ações do menu toggle -->
+        <div class="about-background">
+            <div class="divPopupBg">
+                <button onclick={openCloseAbout()}>Fechar</button>
+                <h2>ABOUT</h2>
+                <p>Olá,  gostou do app? Que bom!</p>
+                <p>Quer conhecer mais?</p>
+                <p>Visite: https://hencan.github.io/portifolio/</p>
+                <h2>Abraço, HenCan</h2>
+                <button onclick={openCloseAbout()}>Fechar</button>
+            </div>
+        </div><!-- Ações do menu toggle -->
+        <div class="help-background">
+            <div class="divPopupBg">
+                <button onclick={openCloseHelp()}>Fechar</button>
+                <h2>HELP</h2>
+                <img src="./images/help/help1.png" alt="">
+                <img src="./images/help/help2.png" alt="">
+                <img src="./images/help/help3.png" alt="">
+                <img src="./images/help/help4.png" alt="">
+                <br>
+                <button onclick={openCloseHelp()}>Fechar</button>
+            </div>
+        </div><!-- Ações do menu toggle -->
+        <div class="share-background">
+            <div class="divPopupBg">
+                <button onclick={openCloseShare()}>Fechar</button>
+                <h3>COMPARTILHAMENTO</h2>
+                <p>Não há suporta a função de compartilhamento (navigator.share).</p>
+                <p>Mas vc ainda pode compartilhar, basta copiar o endereço:</p>
+                <p>https://hencan.github.io/projects/calcRecibos/index.html</p>
+                <button onclick={openCloseShare()}>Fechar</button>
+            </div>
+        </div><!-- Ações do menu toggle -->
         <div class="menu-background" onclick={openCloseMenuToggle()}></div><!-- Fim do menu toggle -->
     </header>
     <div id="app">
@@ -48,12 +78,12 @@
             </div>
             <div id="footerLogo-nome">HEN CAN</div>
         </div>
-        <div id="openCloseHist" onclick={openCloseHistCalc()}>⇅ HISTORICO</div>
-        <div id="openCloseCalc" onclick={openCloseHistCalc()}>⇅ CALCULADORA</div>
+        <div id="openCloseHist" onclick={openCloseHistCalc()} title="Mostrar histórico">⇅ HISTORICO</div>
+        <div id="openCloseCalc" onclick={openCloseHistCalc()} title="Mostrar calculadora">⇅ CALCULADORA</div>
         <div id="calculator">
             <div id="display"><div id="displaySub">0</div><div id="displayNum">0</div></div>
             <div id="keyboard">
-                <div class="buttonsGray" id="previewBtn">💾</div>
+                <div class="buttonsGray" id="previewBtn" title="Salvar histórico">💾</div>
                 <div class="buttonsGray">C</div>
                 <div class="buttonsGray">⌫</div>
                 <div class="buttonsGray">÷</div>
@@ -81,9 +111,10 @@
     <script src="./scripts/saveFile.js"></script>
 </body>
 <div class="imagePreview-bg">
-    <h3>Preview :</h3>
+    <br>
+    <a id="btn-Convert-Html2Image" href="">Download</a>
+    <br>
     <div id="previewImage" onclick={openClosePreview()}></div>
-    <a id="btn-Convert-Html2Image" href="#">Download</a>
 </div>
 
 </html>

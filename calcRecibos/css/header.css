@@ -1,11 +1,12 @@
 .header {
     display: flex;
     flex-direction: row;
+    height: 50px;
 }
 .headerLogo {
     text-align: center;
     cursor: default;
-    margin: 0px 15px;
+    margin: auto auto auto 40px;
     padding: 0;
 }
 #headerLogo-nome {
@@ -23,7 +24,7 @@
     display: flex;
     flex-direction: row;
     font-size: 10px;
-    margin-left: auto;
+    margin: auto 30px auto auto;
 }
 .headerMenu div{
     padding: 0 10px;
