@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/menuToggle.css">
+    <link rel="stylesheet" href="./css/previewImage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./scripts/html2canvas.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="headerLogo"><!-- Logo -->
+                <div id="headerLogo-nome">HEN CAN</div>
+                <div id="headerLogo-cargo">Web Developer (Front & Backend)</div>
+        </div>
+        <nav class="headerMenu"><!-- Menu tradicional -->
+                <div  onclick={openCloseAbout()}><img src="./images/icons/iconAbout.png" alt="iconAbout">About</div>
+                <div  onclick={openCloseHelp()}><img src="./images/icons/iconHelp.png" alt="iconHelp">Help</div>
+                <div  onclick={share()}><img src="./images/icons/iconShare.png" alt="iconShare">Share</div>
+        </nav>
+        <div class="menu-burger" onclick={openCloseMenuToggle()}><!-- Menu toggle -->
+            <div class="bar-menu-burger"></div>
+            <div class="bar-menu-burger"></div>
+            <div class="bar-menu-burger"></div>
+        </div>
+        <div class="sidebarMenu">
+            <div onclick={openCloseAbout();openCloseMenuToggle()}><img src="./images/icons/iconAbout.png" alt="iconAbout">About</div>
+            <div onclick={openCloseHelp();openCloseMenuToggle()}><img src="./images/icons/iconHelp.png" alt="iconHelp">Help</div>
+            <div onclick={share();openCloseMenuToggle()}><img src="./images/icons/iconShare.png" alt="iconShare">Share</div>
+        </div>
+        <div class="about-background">
+            <div class="divPopupBg">
+                <button onclick={openCloseAbout()}>Fechar</button>
+                <h2>SOBRE</h2>
+                <p>Olá,  gostou do app? Que bom!</p>
+                <p>Quer conhecer mais?</p>
+                <p>Visite: https://hencan.github.io/portifolio/</p>
+                <h2>Abraço, HenCan</h2>
+                <button onclick={openCloseAbout()}>Fechar</button>
+            </div>
+        </div><!-- Ações do menu toggle -->
+        <div class="help-background">
+            <div class="divPopupBg">
+                <button onclick={openCloseHelp()}>Fechar</button>
+                <h2>HELP</h2>
+                <img src="./images/help/help1.png" alt="Help pag 1">
+                <img src="./images/help/help2.png" alt="Help pag 2">
+                <img src="./images/help/help3.png" alt="Help pag 3">
+                <img src="./images/help/help4.png" alt="Help pag 4">
+                <br>
+                <button onclick={openCloseHelp()}>Fechar</button>
+            </div>
+        </div><!-- Ações do menu toggle -->
+        <div class="share-background">
+            <div class="divPopupBg">
+                <button onclick={openCloseShare()}>Fechar</button>
+                <h3>COMPARTILHAMENTO</h2>
+                <p>Não há suporta a função de compartilhamento (navigator.share).</p>
+                <p>Mas vc ainda pode compartilhar, basta copiar a url na barra de endereço do navegador.</p>
+                <button onclick={openCloseShare()}>Fechar</button>
+            </div>
+        </div><!-- Ações do menu toggle -->
+        <div class="menu-background" onclick={openCloseMenuToggle()}></div><!-- Fim do menu toggle -->
+    </header>
+    <div id="app">
+        <div id="historic">
+            <div id="histTitle">✎ Historico:</div>
+            <div id="histAgrup">
+                <div id="histText">Comentários</div>
+                <div id="histCalc">Cálculos</div>
+            </div>
+            <div id="footerLogo-nome">HEN CAN</div>
+        </div>
+        <div id="openCloseHist" onclick={openCloseHistCalc()} title="Mostrar histórico">⇅ HISTORICO</div>
+        <div id="openCloseCalc" onclick={openCloseHistCalc()} title="Mostrar calculadora">⇅ CALCULADORA</div>
+        <div id="calculator">
+            <div id="display"><div id="displaySub">0</div><div id="displayNum">0</div></div>
+            <div id="keyboard">
+                <div class="buttonsGray" id="previewBtn" title="Salvar histórico">💾</div>
+                <div class="buttonsGray">C</div>
+                <div class="buttonsGray">⌫</div>
+                <div class="buttonsGray">÷</div>
+                <div class="buttonsWhite">7</div>
+                <div class="buttonsWhite">8</div>
+                <div class="buttonsWhite">9</div>
+                <div class="buttonsGray">×</div>
+                <div class="buttonsWhite">4</div>
+                <div class="buttonsWhite">5</div>
+                <div class="buttonsWhite">6</div>
+                <div class="buttonsGray">-</div>
+                <div class="buttonsWhite">1</div>
+                <div class="buttonsWhite">2</div>
+                <div class="buttonsWhite">3</div>
+                <div class="buttonsGray">+</div>
+                <div class="buttonsWhite">⁺/₋</div>
+                <div class="buttonsWhite">0</div>
+                <div class="buttonsWhite">,</div>
+                <div class="buttonsBlue">=</div>
+            </div>
+        </div>   
+    </div>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/support.js"></script>
+    <script src="./scripts/saveFile.js"></script>
+</body>
+<div class="imagePreview-bg">
+    <br>
+    <a id="btn-Convert-Html2Image" href="">Download</a>
+    <br>
+    <div id="previewImage" onclick={openClosePreview()}></div>
+</div>
+
+</html>

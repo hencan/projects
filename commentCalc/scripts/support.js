@@ -60,9 +60,9 @@ function openCloseShare() {
 function share(){
 	if (navigator.share !== undefined) {
 		navigator.share({
-			title: 'O título da sua página',
-			text: 'Um texto de resumo',
-			url: 'https://seusite.com/sua_url',
+			title: 'CommentCalc',
+			text: 'Calculadora com histórico comentável!',
+			url: 'https://hencan.github.io/projects/commentCalc/index.html',
 		})
 		.then(() => console.log('Successful share'))
 		.catch((error) => console.log('Error sharing', error));

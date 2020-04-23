@@ -37,7 +37,7 @@
         <div class="about-background">
             <div class="divPopupBg">
                 <button onclick={openCloseAbout()}>Fechar</button>
-                <h2>ABOUT</h2>
+                <h2>SOBRE</h2>
                 <p>Olá,  gostou do app? Que bom!</p>
                 <p>Quer conhecer mais?</p>
                 <p>Visite: https://hencan.github.io/portifolio/</p>
@@ -49,10 +49,10 @@
             <div class="divPopupBg">
                 <button onclick={openCloseHelp()}>Fechar</button>
                 <h2>HELP</h2>
-                <img src="./images/help/help1.png" alt="">
-                <img src="./images/help/help2.png" alt="">
-                <img src="./images/help/help3.png" alt="">
-                <img src="./images/help/help4.png" alt="">
+                <img src="./images/help/help1-min.png" alt="Help pag 1">
+                <img src="./images/help/help2-min.png" alt="Help pag 2">
+                <img src="./images/help/help3-min.png" alt="Help pag 3">
+                <img src="./images/help/help4-min.png" alt="Help pag 4">
                 <br>
                 <button onclick={openCloseHelp()}>Fechar</button>
             </div>
@@ -62,8 +62,7 @@
                 <button onclick={openCloseShare()}>Fechar</button>
                 <h3>COMPARTILHAMENTO</h2>
                 <p>Não há suporta a função de compartilhamento (navigator.share).</p>
-                <p>Mas vc ainda pode compartilhar, basta copiar o endereço:</p>
-                <p>https://hencan.github.io/projects/calcRecibos/index.html</p>
+                <p>Mas vc ainda pode compartilhar, basta copiar a url na barra de endereço do navegador.</p>
                 <button onclick={openCloseShare()}>Fechar</button>
             </div>
         </div><!-- Ações do menu toggle -->
@@ -112,7 +111,7 @@
 </body>
 <div class="imagePreview-bg">
     <br>
-    <a id="btn-Convert-Html2Image" href="">Download</a>
+    <button id="btn-Convert-Html2Image">Download</button>
     <br>
     <div id="previewImage" onclick={openClosePreview()}></div>
 </div>
