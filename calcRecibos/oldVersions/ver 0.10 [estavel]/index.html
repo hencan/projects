@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/menuToggle.css">
     <link rel="stylesheet" href="./css/previewImage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script> -->
     <script src="./scripts/html2canvas.js"></script>
 </head>
 <body>
@@ -24,20 +26,20 @@
                 <div><img src="./images/iconHelp.png" alt="iconHelp">Help</div>
                 <div  onclick={share()}><img src="./images/iconShare.png" alt="iconShare">Share</div>
         </nav>
-        <div class="menu-burger" onclick={openCloseMenuToggle()}><!-- Menu toggle -->
+        <div class="menu-burger" onclick={openClose()}><!-- Menu toggle -->
             <div class="bar-menu-burger"></div>
             <div class="bar-menu-burger"></div>
             <div class="bar-menu-burger"></div>
         </div>
         <div class="sidebarMenu">
-            <div onclick={openCloseMenuToggle()}><img src="./images/iconAbout.png" alt="iconAbout">About</div>
-            <div onclick={openCloseMenuToggle()}><img src="./images/iconHelp.png" alt="iconHelp">Help</div>
+            <div onclick={openClose()}><img src="./images/iconAbout.png" alt="iconAbout">About</div>
+            <div onclick={openClose()}><img src="./images/iconHelp.png" alt="iconHelp">Help</div>
             <div onclick={share()}><img src="./images/iconShare.png" alt="iconShare">Share</div>
         </div>
-        <div class="about-background" onclick={openCloseMenuToggle()}></div><!-- Ações do menu toggle -->
-        <div class="help-background" onclick={openCloseMenuToggle()}></div><!-- Ações do menu toggle -->
+        <div class="about-background" onclick={openClose()}></div><!-- Ações do menu toggle -->
+        <div class="help-background" onclick={openClose()}></div><!-- Ações do menu toggle -->
         <div class="share-background" onclick={openCloseShare()}><div>Teste de Compartilhamento <br><br> Este sistema não suporta o compartilhamento</div><div>Fechar</div></div><!-- Ações do menu toggle -->
-        <div class="menu-background" onclick={openCloseMenuToggle()}></div><!-- Fim do menu toggle -->
+        <div class="menu-background" onclick={openClose()}></div><!-- Fim do menu toggle -->
     </header>
     <div id="app">
         <div id="historic">
@@ -46,10 +48,7 @@
                 <div id="histText">Comentários</div>
                 <div id="histCalc">Cálculos</div>
             </div>
-            <div id="footerLogo-nome">HEN CAN</div>
         </div>
-        <div id="openCloseHist" onclick={openCloseHistCalc()}>⇅ HISTORICO</div>
-        <div id="openCloseCalc" onclick={openCloseHistCalc()}>⇅ CALCULADORA</div>
         <div id="calculator">
             <div id="display"><div id="displaySub">0</div><div id="displayNum">0</div></div>
             <div id="keyboard">
