@@ -80,7 +80,7 @@ for (var i = 1; i < keys.length; i++) {
                 posOp = 1
                 commaOp = 0
                 isEqualActived = 0
-                isAnyActived += 1
+                isAnyActived = 1
             } else {
                 inputSub.innerHTML += inputNum.innerHTML + btnVal
                 inputMem += inputNum.innerHTML + btnVal
@@ -89,7 +89,7 @@ for (var i = 1; i < keys.length; i++) {
                 posOp = 1
                 commaOp = 0
                 isEqualActived = 0
-                isAnyActived += 1
+                isAnyActived = 1
             }
         } else if (btnVal == '×') {
             if (isAnyActived == 0) {
@@ -100,7 +100,7 @@ for (var i = 1; i < keys.length; i++) {
                 posOp = 1
                 commaOp = 0
                 isEqualActived = 0
-                isAnyActived += 1
+                isAnyActived = 1
             } else {
                 inputSub.innerHTML += inputNum.innerHTML + btnVal
                 inputMem += inputNum.innerHTML + btnVal
@@ -109,7 +109,7 @@ for (var i = 1; i < keys.length; i++) {
                 posOp = 1
                 commaOp = 0
                 isEqualActived = 0
-                isAnyActived += 1
+                isAnyActived = 1
             }
         } else if (btnVal == ',') {
             if (commaOp == 0) {
@@ -124,7 +124,7 @@ for (var i = 1; i < keys.length; i++) {
                 posOp = 1
                 commaOp = 0
                 isEqualActived = 0
-                isAnyActived += 1
+                isAnyActived = 1
             } else {
                 inputSub.innerHTML += inputNum.innerHTML + btnVal
                 inputMem += inputNum.innerHTML + btnVal
@@ -132,7 +132,7 @@ for (var i = 1; i < keys.length; i++) {
                 posOp = 1
                 commaOp = 0
                 isEqualActived = 0
-                isAnyActived += 1
+                isAnyActived = 1
             } 
         } else if (btnVal == '-') {
             if (isAnyActived == 0) {
@@ -142,7 +142,7 @@ for (var i = 1; i < keys.length; i++) {
                 posOp = 1
                 commaOp = 0
                 isEqualActived = 0
-                isAnyActived += 1
+                isAnyActived = 1
             } else {
                 inputSub.innerHTML += inputNum.innerHTML + btnVal
                 inputMem += inputNum.innerHTML + btnVal
@@ -150,7 +150,7 @@ for (var i = 1; i < keys.length; i++) {
                 posOp = 1
                 commaOp = 0
                 isEqualActived = 0
-                isAnyActived += 1
+                isAnyActived = 1
             }  
         } else if (posOp != 0) {
             inputNum.innerHTML = ''
