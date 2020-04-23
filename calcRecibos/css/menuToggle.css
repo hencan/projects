@@ -37,6 +37,26 @@
   height: 30px;
   padding: 0;
 }
+.about-background {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  z-index: 90;
+  transition: linear 100ms;
+}
+.help-background {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  z-index: 90;
+  transition: linear 100ms;
+}
 .menu-background {
   background-color: rgba(0, 0, 0, 0.75);
   position: fixed;

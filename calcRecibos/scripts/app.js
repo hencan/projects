@@ -25,14 +25,17 @@ for (var i = 1; i < keys.length; i++) {
             inputMem = ""
             inputVal = ""
         } else if (btnVal == '=') {
-            if (isEqualActived == 0) {
+            if (isEqualActived == 0 && isAnyActived == 1) {
                 inputMem += inputNum.innerHTML
+                inputMem = inputMem.replace(",", ".")
                 inputVal = eval(inputMem)
                 inputMem = inputVal
                 inputSub.innerHTML += inputNum.innerHTML
+                inputNum.innerHTML = inputVal
+                inputNum.innerHTML = inputNum.innerHTML.replace(".", ",")
                 document.querySelector('#histText').innerHTML += "<br><span>✎</span>"
                 document.querySelector('#histCalc').innerHTML += "<br>" + inputSub.innerHTML + " = " + inputVal
-                inputNum.innerHTML = inputVal
+                document.querySelector('#histCalc').innerHTML = document.querySelector('#histCalc').innerHTML.replace(".", ",")
                 posOp = 1
                 isEqualActived = 1
                 isAnyActived = 0
@@ -73,14 +76,18 @@ for (var i = 1; i < keys.length; i++) {
                 inputSub.innerHTML = inputNum.innerHTML + btnVal
                 inputMem = inputNum.innerHTML + btnVal
                 inputMem = inputMem.replace("÷", "/")
+                inputMem = inputMem.replace(",", ".")
                 posOp = 1
+                commaOp = 0
                 isEqualActived = 0
                 isAnyActived += 1
             } else {
                 inputSub.innerHTML += inputNum.innerHTML + btnVal
                 inputMem += inputNum.innerHTML + btnVal
                 inputMem = inputMem.replace("÷", "/")
+                inputMem = inputMem.replace(",", ".")
                 posOp = 1
+                commaOp = 0
                 isEqualActived = 0
                 isAnyActived += 1
             }
@@ -89,31 +96,41 @@ for (var i = 1; i < keys.length; i++) {
                 inputSub.innerHTML = inputNum.innerHTML + btnVal
                 inputMem = inputNum.innerHTML + btnVal
                 inputMem = inputMem.replace("×", "*")
+                inputMem = inputMem.replace(",", ".")
                 posOp = 1
+                commaOp = 0
                 isEqualActived = 0
                 isAnyActived += 1
             } else {
                 inputSub.innerHTML += inputNum.innerHTML + btnVal
                 inputMem += inputNum.innerHTML + btnVal
                 inputMem = inputMem.replace("×", "*")
+                inputMem = inputMem.replace(",", ".")
                 posOp = 1
+                commaOp = 0
                 isEqualActived = 0
                 isAnyActived += 1
             }
         } else if (btnVal == ',') {
-            inputNum.innerHTML += btnVal
-            commaOp = 1
+            if (commaOp == 0) {
+                inputNum.innerHTML += btnVal
+                commaOp = 1
+            }
         } else if (btnVal == '+') {
             if (isAnyActived == 0) {
                 inputSub.innerHTML = inputNum.innerHTML + btnVal
                 inputMem = inputNum.innerHTML + btnVal
+                inputMem = inputMem.replace(",", ".")
                 posOp = 1
+                commaOp = 0
                 isEqualActived = 0
                 isAnyActived += 1
             } else {
                 inputSub.innerHTML += inputNum.innerHTML + btnVal
                 inputMem += inputNum.innerHTML + btnVal
+                inputMem = inputMem.replace(",", ".")
                 posOp = 1
+                commaOp = 0
                 isEqualActived = 0
                 isAnyActived += 1
             } 
@@ -121,13 +138,17 @@ for (var i = 1; i < keys.length; i++) {
             if (isAnyActived == 0) {
                 inputSub.innerHTML = inputNum.innerHTML + btnVal
                 inputMem = inputNum.innerHTML + btnVal
+                inputMem = inputMem.replace(",", ".")
                 posOp = 1
+                commaOp = 0
                 isEqualActived = 0
                 isAnyActived += 1
             } else {
                 inputSub.innerHTML += inputNum.innerHTML + btnVal
                 inputMem += inputNum.innerHTML + btnVal
+                inputMem = inputMem.replace(",", ".")
                 posOp = 1
+                commaOp = 0
                 isEqualActived = 0
                 isAnyActived += 1
             }  
