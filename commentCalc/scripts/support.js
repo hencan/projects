@@ -12,7 +12,7 @@ document.querySelector("#openCloseCalc").style.height = (window.innerHeight - 10
 function openCloseMenuToggle() {
     if (openMenu == 1) {
         document.querySelector(".sidebarMenu").style.right = -60 + "px"
-        document.querySelector(".menu-background").style.right = -10000 + "px"
+        document.querySelector(".menu-background").style.right = -100 + "vw"
         openMenu = 0
     } else {
         document.querySelector(".sidebarMenu").style.right = 0
@@ -22,7 +22,8 @@ function openCloseMenuToggle() {
 }
 function openClosePreview() {
 if (openPreview == 1) {
-    document.querySelector(".imagePreview-bg").style.right = -10000 + "px"
+    document.querySelector(".imagePreview-bg").style.right = -100 + "vw"
+    document.querySelector("#previewImage").innerHTML = ""
     openPreview = 0
 } else {
     document.querySelector(".imagePreview-bg").style.right = 0
@@ -31,7 +32,7 @@ if (openPreview == 1) {
 }
 function openCloseAbout() {
     if (openAbout == 1) {
-        document.querySelector(".about-background").style.right = -10000 + "px"
+        document.querySelector(".about-background").style.right = -100 + "vw"
         openAbout = 0
     } else {
         document.querySelector(".about-background").style.right = 0
@@ -40,7 +41,7 @@ function openCloseAbout() {
 }
 function openCloseHelp() {
     if (openHelp == 1) {
-        document.querySelector(".help-background").style.right = -10000 + "px"
+        document.querySelector(".help-background").style.right = -100 + "vw"
         openHelp = 0
     } else {
         document.querySelector(".help-background").style.right = 0
@@ -49,7 +50,7 @@ function openCloseHelp() {
 }
 function openCloseShare() {
     if (openShare == 1) {
-        document.querySelector(".share-background").style.right = -10000 + "px"
+        document.querySelector(".share-background").style.right = -100 + "vw"
         openShare = 0
     } else {
         document.querySelector(".share-background").style.right = 0
@@ -74,14 +75,14 @@ function share(){
 // Função da Calculadora/Historico
 function openCloseHistCalc() {
     if (openHistCalc == 1) {
-        document.querySelector("#historic").style.display = "none"
-        document.querySelector("#calculator").style.display = "block"
+        document.querySelector("#historic").style.position = "fixed"
+        document.querySelector("#calculator").style.position = "initial"
         document.querySelector("#openCloseHist").style.display = "block"
         document.querySelector("#openCloseCalc").style.display = "none"
         openHistCalc = 0
     } else {
-        document.querySelector("#historic").style.display = "block"
-        document.querySelector("#calculator").style.display = "none"
+        document.querySelector("#historic").style.position = "initial"
+        document.querySelector("#calculator").style.position = "fixed"
         document.querySelector("#openCloseHist").style.display = "none"
         document.querySelector("#openCloseCalc").style.display = "block"
         openHistCalc = 1

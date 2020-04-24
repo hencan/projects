@@ -14,7 +14,8 @@ $(document).ready(function () {
         });
 
         if (openPreview == 1) {
-            document.querySelector(".imagePreview-bg").style.right = -10000 + "px"
+            document.querySelector(".imagePreview-bg").style.right = -100 + "vw"
+            previewImage
             openPreview = 0
         } else {
             document.querySelector(".imagePreview-bg").style.right = 0
@@ -30,5 +31,3 @@ $(document).ready(function () {
     });
 
 });
-
-imagePreview - bg

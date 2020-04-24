@@ -10,8 +10,7 @@
     text-align: center;
     align-items: center;
 }
-#btn-Convert-Html2Image {
-  text-decoration: none;
+.imagePreview-bg button {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;

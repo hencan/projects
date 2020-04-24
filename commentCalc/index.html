@@ -36,31 +36,31 @@
         </div>
         <div class="about-background">
             <div class="divPopupBg">
-                <button onclick={openCloseAbout()}>Fechar</button>
-                <h2>SOBRE</h2>
+                <div style="margin: 0 auto 30px auto; border-radius: 10px; padding: 10px; font-size: 30px; background-color: chocolate; width: 95%;">SOBRE</div>
                 <p>Olá,  gostou do app? Que bom!</p>
                 <p>Quer conhecer mais?</p>
                 <p>Visite: https://hencan.github.io/portifolio/</p>
-                <h2>Abraço, HenCan</h2>
+                <p>Abraço, HenCan</p>
                 <button onclick={openCloseAbout()}>Fechar</button>
             </div>
         </div><!-- Ações do menu toggle -->
         <div class="help-background">
             <div class="divPopupBg">
                 <button onclick={openCloseHelp()}>Fechar</button>
-                <h2>HELP</h2>
-                <img src="./images/help/help1-min.png" alt="Help pag 1">
-                <img src="./images/help/help2-min.png" alt="Help pag 2">
-                <img src="./images/help/help3-min.png" alt="Help pag 3">
-                <img src="./images/help/help4-min.png" alt="Help pag 4">
+                <img src="./images/help/Slide1.png" alt="Help pag 1">
+                <img src="./images/help/Slide2.png" alt="Help pag 2">
+                <img src="./images/help/Slide3.png" alt="Help pag 3">
+                <img src="./images/help/Slide4.png" alt="Help pag 4">
+                <img src="./images/help/Slide5.png" alt="Help pag 5">
+                <img src="./images/help/Slide6.png" alt="Help pag 6">
+                <img src="./images/help/Slide7.png" alt="Help pag 7">
                 <br>
                 <button onclick={openCloseHelp()}>Fechar</button>
             </div>
         </div><!-- Ações do menu toggle -->
         <div class="share-background">
             <div class="divPopupBg">
-                <button onclick={openCloseShare()}>Fechar</button>
-                <h3>COMPARTILHAMENTO</h2>
+                <div style="margin: 0 auto 30px auto; border-radius: 10px; padding: 10px; font-size: 30px; background-color: chocolate; width: 95%;">COMPARTILHAMENTO</div>
                 <p>Não há suporta a função de compartilhamento (navigator.share).</p>
                 <p>Mas vc ainda pode compartilhar, basta copiar a url na barra de endereço do navegador.</p>
                 <button onclick={openCloseShare()}>Fechar</button>
@@ -70,10 +70,13 @@
     </header>
     <div id="app">
         <div id="historic">
-            <div id="histTitle">✎ Historico:</div>
+            <div id="hisHeader">
+                <div id="previewBtn" title="Salvar histórico">💾</div>
+                <div id="histTitle">✎ Historico:</div>
+            </div>
             <div id="histAgrup">
-                <div id="histText">Comentários</div>
-                <div id="histCalc">Cálculos</div>
+                <div id="histText">[Comentários]</div>
+                <div id="histCalc">[Cálculos]</div>
             </div>
             <div id="footerLogo-nome">HEN CAN</div>
         </div>
@@ -82,9 +85,9 @@
         <div id="calculator">
             <div id="display"><div id="displaySub">0</div><div id="displayNum">0</div></div>
             <div id="keyboard">
-                <div class="buttonsGray" id="previewBtn" title="Salvar histórico">💾</div>
-                <div class="buttonsGray">C</div>
+                <div class="buttonsGray colorRedBold">C</div>
                 <div class="buttonsGray">⌫</div>
+                <div class="buttonsGray">%</div>
                 <div class="buttonsGray">÷</div>
                 <div class="buttonsWhite">7</div>
                 <div class="buttonsWhite">8</div>
@@ -109,11 +112,11 @@
     <script src="./scripts/support.js"></script>
     <script src="./scripts/saveFile.js"></script>
 </body>
-<div class="imagePreview-bg">
+<div class="imagePreview-bg" onclick={openClosePreview()}>
     <br>
     <button id="btn-Convert-Html2Image">Download</button>
     <br>
-    <div id="previewImage" onclick={openClosePreview()}></div>
+    <div id="previewImage"></div>
 </div>
 
 </html>

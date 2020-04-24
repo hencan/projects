@@ -7,7 +7,7 @@ var isAnyActived = 0
 var inputMem = ""
 var inputVal = ""
 
-for (var i = 1; i < keys.length; i++) {
+for (var i = 0; i < keys.length; i++) {
     keys[i].onclick = function () {
         var btnVal = ""
         var inputNum = document.querySelector('#displayNum')
@@ -70,6 +70,15 @@ for (var i = 1; i < keys.length; i++) {
                 inputNum.innerHTML = 0
             } else {
                 inputNum.innerHTML = eval(inputNum.innerHTML) * (-1)
+            }
+        } else if (btnVal == '%') {
+            if (inputNum.innerHTML == "") {
+                inputNum.innerHTML = 0
+            } else if (inputNum.innerHTML == 0) {
+                inputNum.innerHTML = 0
+            } else {
+                inputNum.innerHTML = eval(inputNum.innerHTML) / (100)
+                inputNum.innerHTML = inputNum.innerHTML.replace(".", ",")
             }
         } else if (btnVal == '÷') {
             if (isAnyActived == 0) {
