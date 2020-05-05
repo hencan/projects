@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         if (openPreview == 1) {
             document.querySelector(".imagePreview-bg").style.right = -100 + "vw"
-            document.querySelector("#previewImage").innerHTML = ""
+            previewImage
             openPreview = 0
         } else {
             document.querySelector(".imagePreview-bg").style.right = 0

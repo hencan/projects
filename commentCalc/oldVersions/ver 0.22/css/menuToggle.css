@@ -78,8 +78,7 @@
   height: 80vh;
   overflow-y: scroll;
   font-size: 20px;
-  border-radius: 10px;
-  /* transition: opacity 0.3s ease; */
+  border-radius: 10px
 }
 .divPopupBg img {
   max-width: 75vw;
