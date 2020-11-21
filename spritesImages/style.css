@@ -1,0 +1,15 @@
+.icon {
+    width: 65px;
+    height: 65px;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#home {
+    background: url(icons.jpg) -1022px -13px;
+}
+
+#phone {
+    background: url(icons.jpg) -793px -89px;
+}
