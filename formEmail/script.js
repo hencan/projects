@@ -5,19 +5,21 @@ function validacaoEmail(field) {
     console.log(user)
     console.log(domain)
 
-    if ((user.length >= 1) && //Verificação de tamanho mínimo
-        (domain.length >= 3) && //Verificação de tamanho mínimo
-        (user.search("@") == -1) && //Confirma
+    // Verificação de tamanho mínimo, existência de espaços vazios e caracteres especiais.
+    if ((user.length >= 1) &&
+        (domain.length >= 3) &&
+        (user.search("@") == -1) &&
         (domain.search("@") == -1) &&
         (user.search(" ") == -1) &&
         (domain.search(" ") == -1) &&
         (domain.search(".") != -1) &&
         (domain.indexOf(".") >= 1) &&
         (domain.lastIndexOf(".") < domain.length - 1)) {
+        // Verificação do dominio do email
         if (domain == "gmail.com" || domain == "hotmail.com" || domain == "outlook.com" || domain == "outlook.com.br") {
-            document.getElementById("msgEmail").innerHTML = "<font color='blue'>E-mail válido";
+            document.getElementById("msgEmail").innerHTML = "<font color='blue'>E-mail válido"; //Msg de Validação
             document.getElementById("passField").disabled = false;
-            document.getElementById("passField").focus();
+            document.getElementById("passField").focus(); // Focus forçado para o próximo campo a ser preenchido.
             document.getElementById("subBtn").disabled = false;
         }
         else {
@@ -37,7 +39,7 @@ function validacaoEmail(field) {
         // alert("E-mail invalido");
     }
 }
-
+// Função que retorna as configurações iniciais do formulário
 function clearMsgEmail() {
     document.getElementById("msgEmail").innerHTML = "Nota: Utilize um Gmail, Outlook ou Hotmail.";
     document.getElementById("subBtn").disabled = true;
